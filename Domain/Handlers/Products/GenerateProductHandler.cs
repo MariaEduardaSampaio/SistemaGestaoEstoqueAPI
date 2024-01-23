@@ -1,8 +1,9 @@
-﻿using Domain.Commands.Results;
-using Domain.Repositories;
+﻿using Domain.Repositories;
 using Domain.Entities;
 using Shared.Commands;
 using Domain.Commands.Inputs.Products;
+using Domain.Commands.Results.Products;
+using Domain.Commands.Results.Shared;
 
 namespace Domain.Handlers.Products
 {

@@ -1,13 +1,6 @@
-﻿using Domain.Commands.Inputs;
-using Domain.Commands.Results;
-using Domain.Entities;
-using Domain.Repositories;
+﻿using Domain.Repositories;
 using Shared.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Domain.Commands.Results.Shared;
 
 namespace Domain.Handlers.Users
 {

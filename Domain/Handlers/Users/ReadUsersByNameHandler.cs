@@ -1,11 +1,6 @@
-﻿using Domain.Commands.Results;
+﻿using Domain.Commands.Results.Shared;
 using Domain.Repositories;
 using Shared.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Handlers.Users
 {

@@ -1,4 +1,4 @@
-﻿using Domain.Commands.Results;
+﻿using Domain.Commands.Results.Shared;
 using Domain.Repositories;
 using Shared.Commands;
 

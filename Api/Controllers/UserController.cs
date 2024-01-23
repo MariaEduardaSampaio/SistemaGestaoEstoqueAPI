@@ -5,9 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Shared.Commands;
 
-
 namespace Api.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     [Route("api/users")]
     public class UserController
     {

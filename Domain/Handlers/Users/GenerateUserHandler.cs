@@ -1,4 +1,5 @@
-﻿using Domain.Commands.Results;
+﻿using Domain.Commands.Results.Users;
+using Domain.Commands.Results.Shared;
 using Domain.Repositories;
 using Domain.Entities;
 using Shared.Commands;

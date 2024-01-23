@@ -1,36 +1,37 @@
+using Infrastructure.Repositories;
+using Domain.Repositories;
+using Infrastructure;
+using Microsoft.OpenApi.Models;
 
-namespace SistemaGestaoEstoque
+namespace Api
 {
-    public class Program
+    public class Startup
     {
-        public static void Main(string[] args)
+        public void ConfigureServices(IServiceCollection services)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            services.AddScoped<DataContext, DataContext>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IProductRepository, ProductRepository>();
 
-            // Add services to the container.
-
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
+            services.AddSwaggerGen(c =>
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api Cartão Virtual", Version = "v1" });
+            });
+        }
 
-            app.UseHttpsRedirection();
+        public void Configure(IApplicationBuilder app)
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Gestão Estoque - V1");
+            });
 
-            app.UseAuthorization();
-
-
-            app.MapControllers();
-
-            app.Run();
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

@@ -1,8 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Repositories;
 using Microsoft.Extensions.DependencyInjection;
-using System.Xml.Linq;
-
 
 namespace Infrastructure.Repositories
 {

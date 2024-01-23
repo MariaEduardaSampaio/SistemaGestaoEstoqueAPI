@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Domain.Commands.Inputs.Users
+﻿namespace Domain.Commands.Inputs.Users
 {
     public class GenerateUserCommand
     {

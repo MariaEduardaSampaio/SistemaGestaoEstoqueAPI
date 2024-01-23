@@ -13,6 +13,5 @@ namespace Domain.Commands.Results.Shared
             Message = message;
             Data = data;
         }
-
     }
 }
